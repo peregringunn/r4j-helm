@@ -9,6 +9,6 @@ entries:
     name: r4j
     type: application
     urls:
-    - https://peregringunn.github.io/r4j/r4j-0.1.0.tgz
+    - https://peregringunn.github.io/r4j-helm/r4j-0.1.0.tgz
     version: 0.1.0
 generated: "2022-12-07T16:09:48.4020701-06:00"
