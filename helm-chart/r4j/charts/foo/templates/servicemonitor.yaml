@@ -1,0 +1,15 @@
+apiVersion: monitoring.coreos.com/v1
+kind: ServiceMonitor
+metadata:
+  name: {{ include "foo.fullname" . }}
+  namespace: {{ .Values.namespace }}
+spec:
+  namespaceSelector:
+    matchNames:
+    - r4j-testing
+  selector:
+    matchLabels:
+      {{- include "foo.selectorLabels" . | nindent 6 }}
+  endpoints:
+  - path: /actuator/prometheus
+    port: "http"
